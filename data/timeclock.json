@@ -1,0 +1,27 @@
+{
+  "employees": [
+    {
+      "id": "107e81f2b07b3eda",
+      "name": "Num",
+      "createdAt": "2026-03-12T11:32:22.661Z",
+      "updatedAt": "2026-03-12T11:32:22.661Z"
+    },
+    {
+      "id": "b539b6e19b1843d1",
+      "name": "Giovanni",
+      "createdAt": "2026-03-12T11:32:12.464Z",
+      "updatedAt": "2026-03-12T11:34:23.505Z"
+    }
+  ],
+  "shifts": [
+    {
+      "id": "60695cf71fdfb65164ac",
+      "employeeId": "b539b6e19b1843d1",
+      "employeeName": "Giovanni",
+      "clockInAt": "2026-03-12T11:32:25.083Z",
+      "clockOutAt": "2026-03-12T11:34:23.505Z",
+      "workedMinutes": 2,
+      "status": "closed"
+    }
+  ]
+}

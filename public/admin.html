@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suporte do RDCRIA | Painel</title>
+  <meta name="description" content="Painel de atendimento do RDCRIA." />
+  <link rel="stylesheet" href="/assets/admin.css" />
+</head>
+<body>
+  <div class="admin-shell">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <span class="brand-mark">R</span>
+        <div>
+          <small>atendimento interno</small>
+          <strong>Suporte do RDCRIA</strong>
+        </div>
+      </div>
+
+      <div class="sidebar-block">
+        <p class="sidebar-label">Atendimentos</p>
+        <div class="stats-grid">
+          <article class="stat-card">
+            <span>Total</span>
+            <strong id="statTotal">0</strong>
+          </article>
+          <article class="stat-card">
+            <span>Abertos</span>
+            <strong id="statOpen">0</strong>
+          </article>
+          <article class="stat-card">
+            <span>Em atendimento</span>
+            <strong id="statProgress">0</strong>
+          </article>
+          <article class="stat-card">
+            <span>Resolvidos</span>
+            <strong id="statResolved">0</strong>
+          </article>
+        </div>
+      </div>
+
+      <div class="sidebar-block">
+        <p class="sidebar-label">Status dos serviços</p>
+        <div id="servicesEditor" class="services-editor"></div>
+        <button id="saveServicesBtn" class="button ghost full">Salvar status</button>
+      </div>
+    </aside>
+
+    <main class="admin-main">
+      <section id="loginSection" class="auth-card">
+        <span class="eyebrow">Acesso restrito</span>
+        <h1>Entrar no painel</h1>
+        <form id="loginForm" class="auth-form">
+          <label>
+            Usuário
+            <input type="text" name="username" autocomplete="username" required />
+          </label>
+
+          <label>
+            Senha
+            <input type="password" name="password" autocomplete="current-password" required />
+          </label>
+
+          <button type="submit" class="button primary full">Entrar</button>
+        </form>
+        <div id="loginError" class="auth-error hidden"></div>
+      </section>
+
+      <section id="panelSection" class="panel-section hidden">
+        <header class="panel-header">
+          <div>
+            <span class="eyebrow">Painel de atendimento</span>
+            <h1>Conversas abertas</h1>
+          </div>
+
+          <div class="header-actions">
+            <button id="refreshBtn" class="button ghost">Atualizar</button>
+            <button id="logoutBtn" class="button danger">Sair</button>
+          </div>
+        </header>
+
+        <section class="timeclock-layout">
+          <article class="timeclock-card">
+            <div class="section-head">
+              <div>
+                <span class="eyebrow">Ponto da equipe</span>
+                <h2>Entrada e saída</h2>
+              </div>
+              <p class="section-copy">Registre a jornada da equipe e acompanhe o histórico sem sair do painel.</p>
+            </div>
+
+            <div class="timeclock-summary">
+              <article class="time-stat-card">
+                <span>Funcionários</span>
+                <strong id="clockEmployees">0</strong>
+              </article>
+              <article class="time-stat-card">
+                <span>Em expediente</span>
+                <strong id="clockWorking">0</strong>
+              </article>
+              <article class="time-stat-card">
+                <span>Saídas hoje</span>
+                <strong id="clockClosedToday">0</strong>
+              </article>
+              <article class="time-stat-card">
+                <span>Horas hoje</span>
+                <strong id="clockHoursToday">0 min</strong>
+              </article>
+            </div>
+
+            <form id="employeeForm" class="employee-form">
+              <div class="employee-form-row">
+                <label>
+                  Nome do funcionário
+                  <input id="employeeNameInput" type="text" placeholder="Ex.: Joao" maxlength="80" required />
+                </label>
+                <button type="submit" class="button primary">Cadastrar</button>
+              </div>
+            </form>
+
+            <div id="employeeRoster" class="employee-roster"></div>
+          </article>
+
+          <article class="timeclock-card">
+            <div class="section-head">
+              <div>
+                <span class="eyebrow">Histórico</span>
+                <h2>Movimentações recentes</h2>
+              </div>
+              <p class="section-copy">Veja entradas, saídas e total trabalhado em cada expediente.</p>
+            </div>
+
+            <div id="timeclockHistory" class="timeclock-history"></div>
+          </article>
+        </section>
+
+        <section class="filter-bar">
+          <label>
+            Buscar
+            <input id="searchInput" type="text" placeholder="Código, nome, e-mail, área..." />
+          </label>
+
+          <label>
+            Status
+            <select id="statusFilter">
+              <option value="Todos">Todos</option>
+              <option value="Aberto">Aberto</option>
+              <option value="Em atendimento">Em atendimento</option>
+              <option value="Aguardando cliente">Aguardando cliente</option>
+              <option value="Resolvido">Resolvido</option>
+            </select>
+          </label>
+        </section>
+
+        <section class="workspace">
+          <div id="ticketsList" class="tickets-list"></div>
+          <div id="ticketDetail" class="ticket-detail empty-state">
+            Selecione um atendimento para visualizar a conversa e responder ao cliente.
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <script src="/assets/admin.js" defer></script>
+</body>
+</html>

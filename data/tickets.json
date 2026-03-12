@@ -1,0 +1,75 @@
+[
+  {
+    "id": "RDC-20260312-0001",
+    "protocol": "RDC-20260312-0001",
+    "createdAt": "2026-03-12T11:31:30.815Z",
+    "updatedAt": "2026-03-12T11:34:05.968Z",
+    "status": "Resolvido",
+    "service": "Canais ao vivo",
+    "device": "tv",
+    "assignedTo": "Num",
+    "adminNotes": "",
+    "customer": {
+      "name": "NUM",
+      "email": "rdd@gmail.com"
+    },
+    "messages": [
+      {
+        "id": "6ba44fb62eb6bc295a64fbc5",
+        "at": "2026-03-12T11:31:30.816Z",
+        "authorType": "customer",
+        "authorName": "NUM",
+        "text": "ss",
+        "public": true
+      },
+      {
+        "id": "410188070dd722a2729f1c42",
+        "at": "2026-03-12T11:31:36.927Z",
+        "authorType": "customer",
+        "authorName": "NUM",
+        "text": "olá",
+        "public": true
+      },
+      {
+        "id": "45952576b1be8ff91459bd80",
+        "at": "2026-03-12T11:32:54.731Z",
+        "authorType": "admin",
+        "authorName": "Suporte do RDCRIA",
+        "text": "Olá, tudo bem?",
+        "public": true
+      },
+      {
+        "id": "a035f30d2759351519cf1181",
+        "at": "2026-03-12T11:33:13.581Z",
+        "authorType": "customer",
+        "authorName": "NUM",
+        "text": "ss",
+        "public": true
+      },
+      {
+        "id": "005d36a98d883cab7fb04a08",
+        "at": "2026-03-12T11:33:25.658Z",
+        "authorType": "admin",
+        "authorName": "Suporte do RDCRIA",
+        "text": "como posso ajuda?",
+        "public": true
+      },
+      {
+        "id": "b6dd969142920a3e7ba9367c",
+        "at": "2026-03-12T11:33:32.259Z",
+        "authorType": "customer",
+        "authorName": "NUM",
+        "text": "u mproblema",
+        "public": true
+      },
+      {
+        "id": "fe2a753fe6d9c6c37acb20a8",
+        "at": "2026-03-12T11:33:52.175Z",
+        "authorType": "customer",
+        "authorName": "NUM",
+        "text": "qual?",
+        "public": true
+      }
+    ]
+  }
+]

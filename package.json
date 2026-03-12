@@ -1,0 +1,10 @@
+{
+  "name": "suporte-rdcria-streamings-chat",
+  "version": "2.0.0",
+  "description": "Portal de suporte para streamings com conversa direta e painel administrativo.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "license": "MIT"
+}

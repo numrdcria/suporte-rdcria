@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b1220" />
+  <title>Suporte do RDCRIA</title>
+  <meta name="description" content="Atendimento direto para streamings com chat, protocolo e acompanhamento em tempo real." />
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="/" class="brand" aria-label="Suporte do RDCRIA">
+        <span class="brand-mark">R</span>
+        <span class="brand-text">
+          <small>streamings</small>
+          <strong>Suporte do RDCRIA</strong>
+        </span>
+      </a>
+
+      <nav class="topnav" aria-label="Navegação principal">
+        <a href="#atendimento">Novo atendimento</a>
+        <a href="#acompanhar">Acompanhar</a>
+        <a href="#status">Status</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section-space">
+      <div class="container hero-grid">
+        <div class="hero-copy card soft-card">
+          <span class="eyebrow">Atendimento para streamings</span>
+          <h1>Abra seu atendimento e fale direto com a equipe.</h1>
+          <p>
+            Relate travamentos, falhas de acesso, canais fora do ar, catálogo, aplicativo,
+            pagamento ou qualquer problema no seu streaming.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#atendimento" class="button primary">Abrir atendimento</a>
+            <a href="#acompanhar" class="button secondary">Continuar conversa</a>
+          </div>
+
+          <div class="hero-points">
+            <article class="mini-card">
+              <strong>Chat direto</strong>
+              <span>Você continua o atendimento pelo mesmo protocolo.</span>
+            </article>
+            <article class="mini-card">
+              <strong>Foco em streaming</strong>
+              <span>Suporte para login, canais, catálogo, app e cobrança.</span>
+            </article>
+          </div>
+        </div>
+
+        <aside class="card info-card">
+          <span class="eyebrow">Como funciona</span>
+          <h2>Atendimento simples, rápido e sem complicação.</h2>
+          <ul class="info-list">
+            <li>Preencha seus dados e descreva o problema</li>
+            <li>Receba o protocolo para acompanhar o atendimento</li>
+            <li>Converse com a equipe no mesmo painel de mensagens</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section-space" id="status">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Status dos streamings</span>
+            <h2>Serviços monitorados</h2>
+          </div>
+        </div>
+
+        <div id="servicesGrid" class="services-grid"></div>
+      </div>
+    </section>
+
+    <section class="section-space">
+      <div class="container forms-grid">
+        <section class="card form-card" id="atendimento">
+          <div class="section-head compact">
+            <div>
+              <span class="eyebrow">Novo atendimento</span>
+              <h2>Abrir conversa</h2>
+            </div>
+            <p>Informe seus dados para iniciar o atendimento.</p>
+          </div>
+
+          <form id="startForm" class="form-stack">
+            <div class="split">
+              <label>
+                Nome
+                <input type="text" name="name" placeholder="Seu nome" required />
+              </label>
+
+              <label>
+                E-mail
+                <input type="email" name="email" placeholder="seu@email.com" required />
+              </label>
+            </div>
+
+            <div class="split">
+              <label>
+                Área
+                <select name="service">
+                  <option value="Login e acesso">Login e acesso</option>
+                  <option value="Canais ao vivo">Canais ao vivo</option>
+                  <option value="Filmes e séries">Filmes e séries</option>
+                  <option value="Aplicativo">Aplicativo</option>
+                  <option value="Cobrança">Cobrança</option>
+                  <option value="Outro">Outro</option>
+                </select>
+              </label>
+
+              <label>
+                Dispositivo
+                <input type="text" name="device" placeholder="TV, celular, box, computador" />
+              </label>
+            </div>
+
+            <label>
+              Mensagem
+              <textarea name="message" rows="6" placeholder="Descreva o problema com detalhes" required></textarea>
+            </label>
+
+            <button type="submit" class="button primary full">Abrir atendimento</button>
+          </form>
+
+          <div id="startFeedback" class="notice hidden"></div>
+        </section>
+
+        <section class="card form-card" id="acompanhar">
+          <div class="section-head compact">
+            <div>
+              <span class="eyebrow">Acompanhar atendimento</span>
+              <h2>Entrar em uma conversa</h2>
+            </div>
+            <p>Use o protocolo e o mesmo e-mail informado na abertura.</p>
+          </div>
+
+          <form id="resumeForm" class="form-stack">
+            <label>
+              Protocolo
+              <input type="text" name="protocol" placeholder="RDC-20260311-0001" required />
+            </label>
+
+            <label>
+              E-mail
+              <input type="email" name="email" placeholder="seu@email.com" required />
+            </label>
+
+            <button type="submit" class="button secondary full">Abrir conversa</button>
+          </form>
+
+          <div id="resumeFeedback" class="notice hidden"></div>
+
+          <div class="tips-box">
+            <strong>Assuntos atendidos</strong>
+            <ul>
+              <li>Erro ao entrar no aplicativo</li>
+              <li>Travamentos ou carregamento lento</li>
+              <li>Canais fora do ar</li>
+              <li>Falhas em filmes e séries</li>
+              <li>Dúvidas de cobrança</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="section-space">
+      <div class="container">
+        <section id="chatPanel" class="chat-shell hidden" aria-live="polite">
+          <div class="chat-header">
+            <div>
+              <span class="eyebrow">Conversa aberta</span>
+              <h2 id="chatProtocolTitle">Atendimento</h2>
+              <p id="chatMeta" class="chat-meta"></p>
+            </div>
+            <span id="chatStatus" class="status-pill success">Aberto</span>
+          </div>
+
+          <div id="chatMessages" class="chat-messages"></div>
+
+          <form id="chatMessageForm" class="chat-compose">
+            <label class="sr-only" for="chatMessageInput">Mensagem</label>
+            <textarea id="chatMessageInput" name="message" rows="4" placeholder="Digite sua mensagem" required></textarea>
+            <button type="submit" class="button primary">Enviar mensagem</button>
+          </form>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <strong>Suporte do RDCRIA</strong>
+    </div>
+  </footer>
+
+  <script src="/assets/app.js" defer></script>
+</body>
+</html>
